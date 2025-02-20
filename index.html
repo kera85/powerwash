@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mycie Dachów i Elewacji – Strona Główna | Myjemy Dachy</title>
+  <meta name="description" content="Wysokociśnieniowe mycie dachów i elewacji – Profesjonalnie i w świetnej cenie. Zadbaj o czystość i wygląd swojego domu lub firmy.">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Zmienne dotyczące nawigacji i hero */
+      --navbar-height: 10vh;
+      --icon-logo-height: 10vh;
+      --hero-font-size: 3vw;
+      --hero-paragraph-font-size: 2vw;
+      --navbar-padding-horizontal: 10vw;
+      --navbar-border-radius: 10px;
+      --navbar-margin-top: 20px;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px var(--navbar-padding-horizontal);
+      position: fixed;
+      width: calc(100% - 2 * var(--navbar-padding-horizontal));
+      top: var(--navbar-margin-top);
+      left: var(--navbar-padding-horizontal);
+      z-index: 1000;
+      height: var(--navbar-height);
+      overflow: hidden;
+      border-radius: var(--navbar-border-radius);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand .icon-only {
+      height: var(--icon-logo-height);
+      margin-right: 10px;
+    }
+
+    /* Nawigacja */
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      width: auto;
+      gap: 10px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #333 !important;
+      font-weight: bold;
+      padding: 20px 30px;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: #005EA8 !important;
+    }
+
+    /* Sekcja hero */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('images/dach.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      color: black;
+      padding-left: 10%;
+    }
+
+    .hero .content {
+      margin-top: 60px; 
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: var(--hero-font-size);
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero h3 {
+      font-size: var(--hero-paragraph-font-size);
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #005EA8;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .hero .btn {
+      font-size: 1.3rem;
+    }
+
+    /* Baner promocyjny */
+    .promo-banner {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      /* Zmieniony kolor tła na bardziej wyrazisty gradient */
+      background: linear-gradient(90deg, #FF4500 0%, #FF8C00 100%);
+      /* Zmiana koloru tekstu na biały dla lepszego kontrastu */
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 2rem;
+      font-weight: bold;
+      /* Obramowanie też na biało, aby komponowało się z tłem */
+      border: 2px solid #fff;
+      border-radius: 8px;
+      z-index: 999;
+      animation: blink 1.5s infinite ease-in-out;
+    }
+
+    /* RESPONSYWNOŚĆ */
+    @media (max-width: 768px) {
+      :root {
+        --navbar-padding-horizontal: 5vw;
+        --navbar-height: 5vh;
+        --icon-logo-height: 7vh;
+        --navbar-margin-top: 0;
+
+        --hero-font-size-mobile: 7vw;
+        --hero-paragraph-font-size-mobile: 5vw;
+        --hero-p-font-size-mobile: 4vw;
+      }
+
+      .navbar {
+        width: 100%;
+        padding: 2px; 
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: auto;
+        display: block;
+        text-align: center;
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 auto;
+      }
+
+      .navbar-nav .nav-item {
+        flex: none;
+        text-align: center;
+        margin: 0 5px;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+      }
+
+      .hero {
+        justify-content: center;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .hero .content {
+        margin-top: 20px;
+        padding: 10px;
+        max-width: 90%;
+      }
+
+      .hero h1 {
+        font-size: var(--hero-font-size-mobile);
+      }
+
+      .hero h3 {
+        font-size: var(--hero-paragraph-font-size-mobile);
+      }
+
+      .hero p {
+        font-size: var(--hero-p-font-size-mobile);
+      }
+
+      .hero .btn {
+        font-size: 3vw;
+      }
+
+      /* Baner w wersji mobilnej przeniesiony na dół */
+      .promo-banner {
+        position: fixed;
+        top: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.4rem;
+      }
+    }
+
+    /* Animacja "mrugania" przycisku z telefonem */
+    @keyframes blink {
+      0%   { opacity: 1; }
+      50%  { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .call-link {
+      display: inline-block;
+      color: #005EA8 !important;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      animation: blink 1.5s infinite ease-in-out;
+    }
+
+    .call-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-collapse {
+        max-height: 65vh;
+        overflow-y: auto; 
+      }
+      .nav-link {
+        padding: 15px;
+      }
+      .nav-item {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+      <!-- Ikona/logo -->
+      <img src="images/IconOnly.jpg" alt="Myjemy Dachy - ikona logo" class="icon-only">
+    </a>
+    <div class="collapse navbar-collapse show" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Strona<br>główna</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="offer.html">Oferta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Kontakt</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="call-link" href="tel:+48123456789" style="color: #005EA8!important;">
+            <span><strong>Zadzwoń</strong><br>+48 123 456 789</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <!-- Baner promocyjny -->
+    <div class="promo-banner">
+      Cena za m² już od 10 zł!
+    </div>
+
+    <div class="content">
+      <h3><span>Wysokociśnieniowe mycie elewacji i dachów – Profesjonalnie i w świetnej cenie!</span></h3>
+      <p>
+        Zadbaj o czystość oraz estetyczny wygląd swojego domu lub firmy dzięki 
+        usługom mycia ciśnieniowego świadczonym przez nasz doświadczony zespół. 
+        Gwarantujemy konkurencyjne stawki oraz najwyższą jakość wykonania.
+      </p>
+      <a href="offer.html" class="btn btn-primary">Sprawdź ofertę</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
