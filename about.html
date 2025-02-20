@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nas - Mycie Dachów i Elewacji | Myjemy Dachy</title>
+  <meta name="description" content="Dowiedz się więcej o naszej firmie, która od lat specjalizuje się w czyszczeniu dachów i elewacji w konkurencyjnych cenach.">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navbar-height: 10vh;
+      --icon-logo-height: 10vh;
+      --text-logo-height: 24vh;
+      --hero-font-size: 3vw;
+      --hero-paragraph-font-size: 2vw;
+      --navbar-padding-horizontal: 10vw;
+      --navbar-border-radius: 10px;
+      --navbar-margin-top: 20px;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px var(--navbar-padding-horizontal);
+      position: fixed;
+      width: calc(100% - 2 * var(--navbar-padding-horizontal));
+      top: var(--navbar-margin-top);
+      left: var(--navbar-padding-horizontal);
+      z-index: 1000;
+      height: var(--navbar-height);
+      overflow: hidden;
+      border-radius: var(--navbar-border-radius);
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand .icon-only {
+      height: var(--icon-logo-height);
+      margin-right: 10px;
+    }
+    .navbar-brand .logo-container {
+      height: var(--text-logo-height);
+      overflow: hidden;
+    }
+    .navbar-brand .text-only {
+      height: 100%;
+      width: auto;
+    }
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      width: auto;
+      gap: 10px;
+    }
+    .navbar-nav .nav-link {
+      color: #333 !important;
+      font-weight: bold;
+      padding: 20px 30px;
+    }
+    .navbar-nav .nav-link.active {
+      color: #007bff !important;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background: url('images/dach.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      color: black;
+      padding-left: 10%;
+    }
+    .hero .content {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .hero h1 {
+      font-size: var(--hero-font-size);
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .hero h3 {
+      font-size: var(--hero-paragraph-font-size);
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: black;
+    }
+    /* RESPONSYWNOŚĆ */
+    @media (max-width: 768px) {
+      :root {
+        --navbar-padding-horizontal: 5vw;
+        --navbar-height: 5vh;
+        --icon-logo-height: 5vh;
+        --text-logo-height: 5vh;
+        --text-logo-width-mobile: 50vw;
+        --navbar-margin-top: 0;
+        --hero-font-size-mobile: 7vw;
+        --hero-paragraph-font-size-mobile: 5vw;
+        --hero-p-font-size-mobile: 4vw;
+      }
+      .navbar {
+        width: 100%;
+        padding: 10px;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: auto;
+        display: block;
+        text-align: center;
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      .navbar-brand .logo-container {
+        height: var(--text-logo-height);
+        width: var(--text-logo-width-mobile);
+        display: flex;
+        align-items: center;
+      }
+      .navbar-brand .text-only {
+        height: auto;
+        width: 100%;
+      }
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 auto;
+      }
+      .navbar-nav .nav-item {
+        flex: none;
+        text-align: center;
+      }
+      .hero {
+        justify-content: center;
+        padding-left: 0;
+        text-align: center;
+      }
+      .hero .content {
+        padding: 10px;
+        max-width: 90%;
+      }
+      .hero h1 {
+        font-size: var(--hero-font-size-mobile);
+      }
+      .hero h3 {
+        font-size: var(--hero-paragraph-font-size-mobile);
+      }
+      .hero p {
+        font-size: var(--hero-p-font-size-mobile);
+      }
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    .call-link {
+      display: inline-block;
+      color: #007bff !important;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      animation: blink 1.5s infinite ease-in-out;
+    }
+    .call-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/IconOnly.jpg" alt="Myjemy Dachy - ikona logo" class="icon-only">
+      <div class="logo-container">
+      </div>
+    </a>
+    <div class="collapse navbar-collapse show" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Strona<br>główna</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="about.html">O nas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="offer.html">Oferta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Kontakt</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="call-link" href="tel:+48123456789" style="color: #007bff!important;">
+            <span><strong>Zadzwoń</strong><br>+48 123 456 789</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="content">
+      <h3><span>Kim jesteśmy</span></h3>
+      <p>Od lat specjalizujemy się w kompleksowym czyszczeniu elewacji i dachów. Dzięki zdobytemu doświadczeniu i nowoczesnemu sprzętowi możemy zaoferować skuteczne usuwanie zabrudzeń, grzybów, porostów oraz mchu. 
+      Nasza firma stawia na indywidualne podejście do każdego zlecenia, terminowość i rzetelność – tak, abyś cieszył się czystą i estetyczną powierzchnią dachu czy fasady.</p>
+      <p>Jesteśmy dumni z licznych realizacji zakończonych zadowoleniem klientów. Bez względu na to, czy potrzebujesz umyć dom jednorodzinny, czy duży obiekt przemysłowy – możesz liczyć na naszą fachową pomoc.</p>
+
+     
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
