@@ -1,0 +1,304 @@
+<!DOCTYPE html> 
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Mycie Dachów i Elewacji | Myjemy Dachy</title>
+  <meta name="description" content="Skontaktuj się z nami w sprawie mycia dachów i elewacji. Zadzwoń, napisz maila lub wypełnij formularz.">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Kluczowe zmienne */
+      --navbar-height: 10vh;
+      --icon-logo-height: 10vh;
+      --hero-font-size: 3vw;
+      --hero-paragraph-font-size: 2vw;
+      --navbar-padding-horizontal: 10vw;
+      --navbar-border-radius: 10px;
+      --navbar-margin-top: 20px;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px var(--navbar-padding-horizontal);
+      position: fixed;
+      width: calc(100% - 2 * var(--navbar-padding-horizontal));
+      top: var(--navbar-margin-top);
+      left: var(--navbar-padding-horizontal);
+      z-index: 1000;
+      height: var(--navbar-height);
+      overflow: hidden;
+      border-radius: var(--navbar-border-radius);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand .icon-only {
+      height: var(--icon-logo-height);
+      margin-right: 10px;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      gap: 10px;
+    }
+
+    .navbar-nav .nav-link {
+      color: #333 !important;
+      font-weight: bold;
+      padding: 20px 30px;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: #005EA8 !important;
+    }
+
+    /* Sekcja hero */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background: url('images/dach.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      color: black;
+      padding: 10% 10% 20px 10%;
+    }
+
+    /* Baner promocyjny */
+    .promo-banner {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #FF4500 0%, #FF8C00 100%);
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 2rem;
+      font-weight: bold;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      z-index: 999;
+      animation: blink 1.5s infinite ease-in-out;
+    }
+
+    .hero .content {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .hero h3 {
+      font-size: var(--hero-paragraph-font-size);
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #005EA8;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    /* Formularz */
+    .contact-form .form-control {
+      margin-bottom: 15px;
+    }
+
+    .form-check-label {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* Animacja "mrugania" (tel. i baner) */
+    @keyframes blink {
+      0%   { opacity: 1; }
+      50%  { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .call-link {
+      display: inline-block;
+      color: #005EA8 !important;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      animation: blink 1.5s infinite ease-in-out;
+    }
+
+    .call-link:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSYWNOŚĆ */
+    @media (max-width: 768px) {
+      :root {
+        --navbar-padding-horizontal: 5vw;
+        --navbar-height: 5vh;
+        --icon-logo-height: 7vh;
+        --navbar-margin-top: 0;
+        --hero-font-size-mobile: 7vw;
+        --hero-paragraph-font-size-mobile: 4vw;
+        --hero-p-font-size-mobile: 4vw;
+      }
+
+      .navbar {
+        width: 100%;
+        padding: 2px;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: auto;
+        display: block;
+        text-align: center;
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 auto;
+      }
+
+      .navbar-nav .nav-item {
+        flex: none;
+        text-align: center;
+        margin: 0 5px;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+      }
+
+      .hero {
+        justify-content: center;
+        padding: 10vh 10px;
+        text-align: center;
+        background-position: center center;
+      }
+
+      .hero .content {
+        padding: 10px;
+        max-width: 90%;
+      }
+
+      .hero h3 {
+        font-size: var(--hero-paragraph-font-size-mobile);
+      }
+
+      .hero p {
+        font-size: var(--hero-p-font-size-mobile);
+      }
+
+      /* Ukrycie banera na urządzeniach mobilnych */
+      .promo-banner {
+        display: none;
+      }
+      @media (max-width: 768px) {
+  .form-check-label {
+    font-size: 0.6rem; /* lub większa wartość, np. 1.1rem */
+  }
+}
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+      <!-- Ikona/logo -->
+      <img src="images/IconOnly.jpg" alt="Myjemy Dachy - ikona logo" class="icon-only">
+    </a>
+    <div class="collapse navbar-collapse show" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Strona<br>główna</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="offer.html">Oferta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Kontakt</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="call-link" href="tel:+48123456789" style="color: #005EA8!important;">
+            <span><strong>Zadzwoń</strong><br>+48 123 456 789</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <!-- Baner promocyjny -->
+    <div class="promo-banner">
+      Cena za m² już od 10 zł!
+    </div>
+
+    <div class="content">
+      <h3>Działamy w rejonie województwa mazowieckiego.</h3>
+      <p>
+        <strong>Telefon:</strong> 123 456 789<br>
+        <strong>E-mail:</strong> <a href="mailto:	powerwashwarsaw@gmail.com">	powerwashwarsaw@gmail.com</a><br>
+      </p>
+
+      <div class="contact-form">
+        <!-- Przykładowy formularz (Formspree) -->
+        <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST">
+          <input type="text" name="name" class="form-control" placeholder="Imię" required>
+          <input type="email" name="email" class="form-control" placeholder="Adres e-mail" required>
+          <input type="text" name="subject" class="form-control" placeholder="Temat" required>
+          <textarea name="message" class="form-control" rows="4" placeholder="Twoje zapytanie" required></textarea>
+          
+          <div class="form-group form-check text-left">
+            <input type="checkbox" class="form-check-input" id="consentCheck" required>
+            <label class="form-check-label" for="consentCheck">
+              Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji dotyczących świadczonych usług. Zgoda może zostać cofnięta w każdym czasie.*
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
