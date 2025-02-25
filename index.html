@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mycie Dachów i Elewacji – Strona Główna | Myjemy Dachy</title>
   <meta name="description" content="Wysokociśnieniowe mycie dachów i elewacji – Profesjonalnie i w świetnej cenie. Zadbaj o czystość i wygląd swojego domu lub firmy.">
-  
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16885820045"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16885820045');
+  </script>
+  <!-- KONIEC Global Site Tag -->
+
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
@@ -13,7 +23,6 @@
 
   <style>
     :root {
-      /* Zmienne dotyczące nawigacji i hero */
       --navbar-height: 10vh;
       --icon-logo-height: 10vh;
       --hero-font-size: 3vw;
@@ -29,7 +38,6 @@
       margin: 0;
     }
 
-    /* Navbar */
     .navbar {
       background-color: #ffffff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -54,7 +62,6 @@
       margin-right: 10px;
     }
 
-    /* Nawigacja */
     .navbar-nav {
       display: flex;
       align-items: center;
@@ -73,7 +80,6 @@
       color: #005EA8 !important;
     }
 
-    /* Sekcja hero */
     .hero {
       position: relative;
       width: 100%;
@@ -119,27 +125,22 @@
       font-size: 1.3rem;
     }
 
-    /* Baner promocyjny */
     .promo-banner {
       position: absolute;
       top: 15%;
       left: 50%;
       transform: translateX(-50%);
-      /* Zmieniony kolor tła na bardziej wyrazisty gradient */
       background: linear-gradient(90deg, #FF4500 0%, #FF8C00 100%);
-      /* Zmiana koloru tekstu na biały dla lepszego kontrastu */
       color: #fff;
       padding: 15px 30px;
       font-size: 2rem;
       font-weight: bold;
-      /* Obramowanie też na biało, aby komponowało się z tłem */
       border: 2px solid #fff;
       border-radius: 8px;
       z-index: 999;
       animation: blink 1.5s infinite ease-in-out;
     }
 
-    /* RESPONSYWNOŚĆ */
     @media (max-width: 768px) {
       :root {
         --navbar-padding-horizontal: 5vw;
@@ -151,7 +152,6 @@
         --hero-paragraph-font-size-mobile: 5vw;
         --hero-p-font-size-mobile: 4vw;
       }
-
       .navbar {
         width: 100%;
         padding: 2px; 
@@ -162,7 +162,6 @@
         display: block;
         text-align: center;
       }
-
       .navbar-brand {
         display: flex;
         align-items: center;
@@ -170,54 +169,43 @@
         margin-bottom: 5px;
         font-size: 0.9rem;
       }
-
       .navbar-nav {
         display: flex;
         justify-content: center;
         flex-direction: row;
         margin: 0 auto;
       }
-
       .navbar-nav .nav-item {
         flex: none;
         text-align: center;
         margin: 0 5px;
       }
-
       .navbar-nav .nav-link {
         font-size: 0.9rem;
         padding: 6px 8px;
       }
-
       .hero {
         justify-content: center;
         padding-left: 0;
         text-align: center;
       }
-
       .hero .content {
         margin-top: 20px;
         padding: 10px;
         max-width: 90%;
       }
-
       .hero h1 {
         font-size: var(--hero-font-size-mobile);
       }
-
       .hero h3 {
         font-size: var(--hero-paragraph-font-size-mobile);
       }
-
       .hero p {
         font-size: var(--hero-p-font-size-mobile);
       }
-
       .hero .btn {
         font-size: 3vw;
       }
-
-      /* Baner w wersji mobilnej przeniesiony na dół */
       .promo-banner {
         position: fixed;
         top: auto;
@@ -228,7 +216,6 @@
       }
     }
 
-    /* Animacja "mrugania" przycisku z telefonem */
     @keyframes blink {
       0%   { opacity: 1; }
       50%  { opacity: 0.5; }
