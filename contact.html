@@ -1,19 +1,18 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt - Mycie Dachów i Elewacji | PowerWash</title>
   <meta name="description" content="Skontaktuj się z nami w sprawie mycia dachów i elewacji. Zadzwoń, napisz maila lub wypełnij formularz.">
 
   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16885820045"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16885820045"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-16885820045');
-
     gtag('config', 'AW-16885820045/W696CIaFsbAaEI3V5PM-', {
       'phone_conversion_number': '+48 692 358 168'
     });
@@ -28,29 +27,27 @@
     }
   </script>
   <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16885820045/WKYiCPqooLAaEI3V5PM-',
+        'event_callback': callback
+      });
+      return false;
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-16885820045/WKYiCPqooLAaEI3V5PM-',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+  </script>
   <!-- KONIEC kodów Google Ads -->
 
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Kluczowe zmienne */
       --navbar-height: 10vh;
       --icon-logo-height: 10vh;
       --hero-font-size: 3vw;
@@ -59,13 +56,11 @@ function gtag_report_conversion(url) {
       --navbar-border-radius: 10px;
       --navbar-margin-top: 20px;
     }
-
     body {
       font-family: 'Roboto', sans-serif;
       font-size: 1.1rem;
       margin: 0;
     }
-
     .navbar {
       background-color: #ffffff;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -79,17 +74,14 @@ function gtag_report_conversion(url) {
       overflow: hidden;
       border-radius: var(--navbar-border-radius);
     }
-
     .navbar-brand {
       display: flex;
       align-items: center;
     }
-
     .navbar-brand .icon-only {
       height: var(--icon-logo-height);
       margin-right: 10px;
     }
-
     .navbar-nav {
       display: flex;
       align-items: center;
@@ -97,17 +89,14 @@ function gtag_report_conversion(url) {
       width: auto;
       gap: 10px;
     }
-
     .navbar-nav .nav-link {
       color: #333 !important;
       font-weight: bold;
       padding: 20px 30px;
     }
-
     .navbar-nav .nav-link.active {
       color: #005EA8 !important;
     }
-
     .hero {
       position: relative;
       width: 100%;
@@ -121,7 +110,6 @@ function gtag_report_conversion(url) {
       color: black;
       padding: 10% 10% 20px 10%;
     }
-
     .promo-banner {
       position: absolute;
       top: 15%;
@@ -137,42 +125,34 @@ function gtag_report_conversion(url) {
       z-index: 999;
       animation: blink 1.5s infinite ease-in-out;
     }
-
     .hero .content {
       max-width: 600px;
       background: rgba(255, 255, 255, 0.7);
       padding: 20px;
       border-radius: 10px;
     }
-
     .hero h3 {
       font-size: var(--hero-paragraph-font-size);
       font-weight: bold;
       margin-bottom: 20px;
       color: #005EA8;
     }
-
     .hero p {
       font-size: 1.3rem;
       margin-bottom: 20px;
       color: black;
     }
-
     .contact-form .form-control {
       margin-bottom: 15px;
     }
-
     .form-check-label {
       font-size: 0.9rem;
-      line-height: 1.4;
     }
-
     @keyframes blink {
-      0%   { opacity: 1; }
-      50%  { opacity: 0.5; }
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
       100% { opacity: 1; }
     }
-
     .call-link {
       display: inline-block;
       color: #005EA8 !important;
@@ -181,85 +161,14 @@ function gtag_report_conversion(url) {
       font-weight: bold;
       animation: blink 1.5s infinite ease-in-out;
     }
-
     .call-link:hover {
       text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      :root {
-        --navbar-padding-horizontal: 5vw;
-        --navbar-height: 5vh;
-        --icon-logo-height: 7vh;
-        --navbar-margin-top: 0;
-        --hero-font-size-mobile: 7vw;
-        --hero-paragraph-font-size-mobile: 4vw;
-        --hero-p-font-size-mobile: 4vw;
-      }
-      .navbar {
-        width: 100%;
-        padding: 2px;
-        left: 0;
-        top: 0;
-        border-radius: 0;
-        height: auto;
-        display: block;
-        text-align: center;
-      }
-      .navbar-brand {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 5px;
-        font-size: 0.9rem;
-      }
-      .navbar-nav {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin: 0 auto;
-      }
-      .navbar-nav .nav-item {
-        flex: none;
-        text-align: center;
-        margin: 0 5px;
-      }
-      .navbar-nav .nav-link {
-        font-size: 0.9rem;
-        padding: 6px 8px;
-      }
-      .hero {
-        justify-content: center;
-        padding: 10vh 10px;
-        text-align: center;
-        background-position: center center;
-      }
-      .hero .content {
-        padding: 10px;
-        max-width: 90%;
-      }
-      .hero h3 {
-        font-size: var(--hero-paragraph-font-size-mobile);
-      }
-      .hero p {
-        font-size: var(--hero-p-font-size-mobile);
-      }
-      .promo-banner {
-        display: none;
-      }
-      @media (max-width: 768px) {
-        .form-check-label {
-          font-size: 0.6rem;
-        }
-      }
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="index.html">
-      <!-- Ikona/logo -->
       <img src="images/IconOnly.jpg" alt="PowerWash - ikona logo" class="icon-only">
     </a>
     <div class="collapse navbar-collapse show" id="navbarNav">
@@ -274,35 +183,25 @@ function gtag_report_conversion(url) {
           <a class="nav-link active" href="contact.html">Kontakt</a>
         </li>
         <li class="nav-item text-center">
-         <a class="call-link" href="tel:+48692358168" onclick="return gtag_report_conversion('tel:+48692358168');" style="color: #005EA8!important;">
-  <span><strong>Zadzwoń</strong><br>+48 692 358 168</span>
-</a>
+          <a class="call-link" href="tel:+48692358168" onclick="return gtag_report_conversion('tel:+48692358168');">
+            <span><strong>Zadzwoń</strong><br>+48 692 358 168</span>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <div class="hero">
-    <!-- Baner promocyjny -->
-    <div class="promo-banner">
-      Cena za m² już od 10 zł!
-    </div>
-
+    <div class="promo-banner">Cena za m² już od 10 zł!</div>
     <div class="content">
       <h3>Działamy w rejonie województwa mazowieckiego.</h3>
-      <p>
-        <strong>E-mail:</strong> <a href="mailto:powerwashwarsaw@gmail.com">powerwashwarsaw@gmail.com</a><br>
-      </p>
-
+      <p><strong>E-mail:</strong> <a href="mailto:powerwashwarsaw@gmail.com">powerwashwarsaw@gmail.com</a></p>
       <div class="contact-form">
-        <!-- Formularz z wywołaniem konwersji przy onsubmit -->
         <form id="contactForm" action="https://formspree.io/f/xeojqbwn" method="POST" onsubmit="trackFormConversion()">
           <input type="text" name="name" class="form-control" placeholder="Imię" required>
           <input type="email" name="email" class="form-control" placeholder="Adres e-mail" required>
           <input type="text" name="subject" class="form-control" placeholder="Temat" required>
           <textarea name="message" class="form-control" rows="4" placeholder="Twoje zapytanie" required></textarea>
-          
           <div class="form-group form-check text-left">
             <input type="checkbox" class="form-check-input" id="consentCheck" required>
             <label class="form-check-label" for="consentCheck">
@@ -315,7 +214,30 @@ function gtag_report_conversion(url) {
     </div>
   </div>
 
-  <!-- Bootstrap JS + Popper.js -->
+  <!-- Stopka -->
+  <footer style="background-color: #f1f1f1; padding: 20px; text-align: center; font-size: 0.9rem;">
+    © 2025 PowerWash — <a href="polityka-prywatnosci.html" style="color: #005EA8;">Polityka prywatności</a>
+  </footer>
+
+  <!-- Cookie banner -->
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.85); color: #fff; padding: 15px 10px; text-align: center; z-index: 9999; font-size: 0.9rem;">
+    Ta strona korzysta z plików cookies w celach statystycznych i funkcjonalnych. 
+    <a href="polityka-prywatnosci.html" style="color: #4fc3f7; text-decoration: underline;">Dowiedz się więcej</a>.
+    <button onclick="acceptCookies()" style="margin-left: 10px; padding: 6px 12px; background: #4fc3f7; color: #000; border: none; border-radius: 4px; cursor: pointer;">Akceptuj</button>
+  </div>
+  <script>
+    function acceptCookies() {
+      document.getElementById("cookie-banner").style.display = "none";
+      localStorage.setItem("cookiesAccepted", "true");
+    }
+    window.onload = function() {
+      if (localStorage.getItem("cookiesAccepted") === "true") {
+        document.getElementById("cookie-banner").style.display = "none";
+      }
+    };
+  </script>
+
+  <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
