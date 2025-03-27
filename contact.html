@@ -27,6 +27,20 @@
       });
     }
   </script>
+  <script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16885820045/WKYiCPqooLAaEI3V5PM-',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   <!-- KONIEC kodów Google Ads -->
 
   <!-- Bootstrap CSS -->
@@ -260,9 +274,9 @@
           <a class="nav-link active" href="contact.html">Kontakt</a>
         </li>
         <li class="nav-item text-center">
-          <a class="call-link" href="tel:+48692358168" style="color: #005EA8!important;">
-            <span><strong>Zadzwoń</strong><br>+48 692 358 168</span>
-          </a>
+         <a class="call-link" href="tel:+48692358168" onclick="return gtag_report_conversion('tel:+48692358168');" style="color: #005EA8!important;">
+  <span><strong>Zadzwoń</strong><br>+48 692 358 168</span>
+</a>
         </li>
       </ul>
     </div>
