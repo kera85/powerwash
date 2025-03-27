@@ -220,18 +220,38 @@
   </footer>
 
   <!-- Cookie banner -->
-  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.85); color: #fff; padding: 15px 10px; text-align: center; z-index: 9999; font-size: 0.9rem;">
-    Ta strona korzysta z plików cookies w celach statystycznych i funkcjonalnych. 
-    <a href="polityka-prywatnosci.html" style="color: #4fc3f7; text-decoration: underline;">Dowiedz się więcej</a>.
-    <button onclick="acceptCookies()" style="margin-left: 10px; padding: 6px 12px; background: #4fc3f7; color: #000; border: none; border-radius: 4px; cursor: pointer;">Akceptuj</button>
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.9); color: #fff; padding: 20px 10px; text-align: center; z-index: 9999; font-size: 0.9rem;">
+    <p>Nasza strona korzysta z plików cookies w celach niezbędnych do działania, a także statystycznych i marketingowych. Możesz zaakceptować wszystkie lub zarządzać nimi samodzielnie. <a href="polityka-prywatnosci.html" style="color: #4fc3f7; text-decoration: underline;">Dowiedz się więcej</a>.</p>
+    <div style="margin: 15px 0;">
+      <label><input type="checkbox" id="cookie-necessary" checked disabled> Niezbędne (wymagane)</label><br>
+      <label><input type="checkbox" id="cookie-statistics"> Statystyczne</label><br>
+      <label><input type="checkbox" id="cookie-marketing"> Marketingowe</label>
+    </div>
+    <button onclick="acceptAllCookies()" style="margin: 5px; padding: 6px 12px; background: #4fc3f7; color: #000; border: none; border-radius: 4px; cursor: pointer;">Akceptuj wszystko</button>
+    <button onclick="saveCookiePreferences()" style="margin: 5px; padding: 6px 12px; background: #ccc; color: #000; border: none; border-radius: 4px; cursor: pointer;">Zapisz wybór</button>
   </div>
   <script>
-    function acceptCookies() {
+    function acceptAllCookies() {
+      localStorage.setItem("cookieConsent", JSON.stringify({
+        necessary: true,
+        statistics: true,
+        marketing: true
+      }));
       document.getElementById("cookie-banner").style.display = "none";
-      localStorage.setItem("cookiesAccepted", "true");
     }
-    window.onload = function() {
-      if (localStorage.getItem("cookiesAccepted") === "true") {
+    function saveCookiePreferences() {
+      const statistics = document.getElementById("cookie-statistics").checked;
+      const marketing = document.getElementById("cookie-marketing").checked;
+      localStorage.setItem("cookieConsent", JSON.stringify({
+        necessary: true,
+        statistics: statistics,
+        marketing: marketing
+      }));
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+    window.onload = function () {
+      const consent = localStorage.getItem("cookieConsent");
+      if (consent) {
         document.getElementById("cookie-banner").style.display = "none";
       }
     };
